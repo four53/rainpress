@@ -141,6 +141,9 @@ class Rainpress
     # Replace background-position:0; with background-position:0 0;
     @style.gsub! 'background-position:0;', 'background-position:0 0;'
 
+    # Replace transform-origin:0; with transform-origin:0 0;
+    @style.gsub! 'transform-origin:0;', 'transform-origin:0 0;'
+
     # Replace 0.6 to .6, but only when preceded by : or a white-space
     @style.gsub! /[:\s]0+\.(\d+)/ do |match|
       match.sub '0', '' # only first '0' !!
