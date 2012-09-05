@@ -135,6 +135,9 @@ describe 'Rainpress module' do
     # Keep 'background-position:0 0;' !!
     Rainpress.compress('background-position:0 0;', options).must_equal 'background-position:0 0;'
 
+    # Keep 'transform-origin:0 0;' !!
+    Rainpress.compress('transform-origin:0 0;', options).must_equal 'transform-origin:0 0;'
+
     # Replace 0.6 to .6, but only when preceded by : or a white-space
     Rainpress.compress(' 0.6', options).must_equal ' .6'
     Rainpress.compress(':0.06', options).must_equal ':.06'
